@@ -9,7 +9,7 @@
 struct Node {
     char *key;
     char *value;
-    struct Node* next;
+    struct Node *next;
 };
 
 unsigned int hashCode(char *key){
@@ -21,7 +21,7 @@ unsigned int hashCode(char *key){
     return hash % HASH_SIZE;
 };
 
-struct Node* createNode(char *key, char *value){
+struct Node *createNode(char *key, char *value){
     struct Node *node = (struct Node*) malloc(sizeof(struct Node));
     node->key = key;
     node->value = value;
